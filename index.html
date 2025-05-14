@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babcock Journals of Computing - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="bg-primary text-white rounded-lg p-8 mb-8" style="background-color: #1e3a8a;">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-4">Babcock Journals of Computing</h1>
+                    <p class="text-xl mb-6">Advancing research and innovation through open access publishing</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="/assets/images/logo/logo.png" alt="Catalyst Journals Logo" class="h-64">
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Issue Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-2" style="color: #1e3a8a; border-color: #1e3a8a;">Journal Issues</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Article Cards -->
+                <a href="pages/journals/bjcet/bjcet.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-7 text-charcoal" style="color: #1f2937;">Babcock Journal of Computing and Emerging Technology (BJCET)</h3>
+                        <img src="assets/images/bjcet.png" alt="bjcet" class="w-72 h-auto object-contain mx-auto">
+                    </div>
+                </a>
+
+                <a href="pages/journals/jcse/jcse.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-7 text-charcoal" style="color: #1f2937;">Journal of Computing and Software Engineering (JCSE)</h3>
+                        <img src="assets/images/jcse.png" alt="bjcet" class="w-72 h-auto object-contain mx-auto">
+                    </div>
+                </a>
+
+                <a href="pages/journals/bjits/bjits.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-7 text-charcoal" style="color: #1f2937;">Babcock Journal of Information Technology and Security (BJITS)</h3>
+                        <img src="assets/images/bjits.png" alt="bjcet" class="w-72 h-auto object-contain mx-auto">
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Publications Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-2" style="color: #1e3a8a; border-color: #1e3a8a;">Latest Publications</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-accent" style="background-color: #dbeafe;">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider" style="color: #1e3a8a;">Title</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider" style="color: #1e3a8a;">Authors</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider" style="color: #1e3a8a;">Published</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-primary uppercase tracking-wider" style="color: #1e3a8a;">Journal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-charcoal" style="color: #1f2937;">Catalyst Design for CO2 Reduction</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-mediumGray" style="color: #6b7280;">Zhang, L.; Wilson, K.; Park, S.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-mediumGray" style="color: #6b7280;">May 5, 2025</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-mediumGray" style="color: #6b7280;">BJCET</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Journal Overview Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-8" style="background-color: #ffffff;">
+                <h2 class="text-2xl font-bold text-primary mb-6" style="color: #1e3a8a;">Publication Overview</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary" style="color: #1e3a8a;">Our Mission</h3>
+                        <p class="text-charcoal mb-6" style="color: #1f2937;">
+                            We are dedicated to publishing high-quality, peer-reviewed research that advances the fields of computer science, information technology, and software engineering. Our mission is to provide a reputable platform for scholars and practitioners to share innovations, foster academic dialogue, and support technological progress in a rapidly evolving digital world.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 text-primary" style="color: #1e3a8a;">Scope</h3>
+                        <p class="text-charcoal" style="color: #1f2937;">
+                            We invite original research and review articles across the core and emerging areas of computing, with a focus on contributions that align with our three specialized journals:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 text-charcoal" style="color: #1f2937;">
+                            <li class="mb-1"><strong>Babcock Journal of Information Technology and Security (BJITS)</strong>: Cybersecurity, data protection, IT governance, information systems, and network security.</li>
+                            <li class="mb-1"><strong>Journal of Computing and Software Engineering (JCSE)</strong>: Software development methodologies, software architecture, programming paradigms, software testing, and DevOps.</li>
+                            <li class="mb-1"><strong>Babcock Journal of Computing and Emerging Technology (BJCET)</strong>: Artificial intelligence, machine learning, cloud computing, blockchain, IoT, and other cutting-edge computing technologies.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-primary" style="color: #1e3a8a;">Quick Links</h3>
+                        <div class="space-y-4">
+                            <a href="pages/authors/author.html" class="block p-4 border border-gray-200 rounded-lg hover:border-secondary hover:bg-accent transition-colors" style="border-color: #e5e7eb; background-color: #ffffff;">
+                                <div class="flex items-center">
+                                    <div class="bg-primary text-white p-3 rounded-full mr-4" style="background-color: #1e3a8a;">
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-charcoal" style="color: #1f2937;">Author Guidelines</h4>
+                                        <p class="text-sm text-mediumGray" style="color: #6b7280;">Understand our submission process and standards</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script>
+        // Load header and footer components
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Journal - Catalyst Journals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="/index.html" class="inline-flex items-center text-sm font-medium text-charcoal hover:text-secondary" style="color: #1f2937;">
+                        <i class="fas fa-home mr-2"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <a href="../../journals/bjcet/bjcet.html" class="ml-1 text-sm font-medium text-charcoal hover:text-secondary md:ml-2" style="color: #1f2937;">Journal of Computing and Software Engineering</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <span class="ml-1 text-sm font-medium text-primary md:ml-2" style="color: #1e3a8a;">Archive</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar Navigation -->
+            <div id="about-sidebar" class="lg:col-span-1"></div>
+            
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h1 class="text-3xl font-bold text-primary mb-6">Journal Archive</h1>
+                    
+                    <!-- Archive sections will be dynamically populated here -->
+                    <div id="archive-content" class="space-y-8">
+                        <!-- Placeholder while loading -->
+                        <div class="flex items-center justify-center p-8">
+                            <i class="fas fa-spinner fa-spin text-primary text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script>
+        // Load header and footer components
+        fetch('../../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('../../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        
+        fetch('../../../components/jcse-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-sidebar').innerHTML = data;
+            });
+
+        // Load and display archive data
+        async function loadArchiveData() {
+            try {
+                // Correct path based on your file structure
+                const response = await fetch('../../../data/articles.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const archiveData = await response.json();
+                displayArchiveData(archiveData);
+            } catch (error) {
+                console.error('Error loading archive data:', error);
+                
+                // Show more specific error messages
+                let errorMessage = 'Error loading archive data';
+                if (error.message.includes('Failed to fetch')) {
+                    errorMessage = 'Could not find archive.json file. Please check the file path.';
+                } else if (error.message.includes('HTTP error')) {
+                    errorMessage = `Server error: ${error.message}`;
+                } else if (error.message.includes('JSON')) {
+                    errorMessage = 'Invalid JSON format in archive file.';
+                }
+                
+                document.getElementById('archive-content').innerHTML = 
+                    `<div class="text-center text-red-500 p-4">
+                        <i class="fas fa-exclamation-triangle text-3xl mb-2"></i>
+                        <p class="text-lg">${errorMessage}</p>
+                        <p class="text-sm mt-2">Check the browser console for more details.</p>
+                    </div>`;
+            }
+        }
+
+        function displayArchiveData(data) {
+            // Group articles by volume and publication date
+            const groupedData = data.articles.reduce((acc, article) => {
+                const volume = article.volume;
+                const issueDate = new Date(article.publication_date);
+                const year = issueDate.getFullYear();
+                const month = issueDate.toLocaleString('default', { month: 'long' });
+                
+                const key = `Volume ${volume} (${year})`;
+                
+                if (!acc[key]) {
+                    acc[key] = {};
+                }
+                
+                const issueKey = `Issue ${article.issue} - ${month} ${year}`;
+                
+                if (!acc[key][issueKey]) {
+                    acc[key][issueKey] = [];
+                }
+                
+                acc[key][issueKey].push(article);
+                
+                return acc;
+            }, {});
+
+            // Sort volumes in descending order
+            const sortedVolumes = Object.keys(groupedData).sort((a, b) => {
+                const volumeA = parseInt(a.match(/\d+/)[0]);
+                const volumeB = parseInt(b.match(/\d+/)[0]);
+                return volumeB - volumeA;
+            });
+
+            // Generate HTML
+            let html = '';
+            
+            sortedVolumes.forEach(volume => {
+                html += `
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-primary mb-4">${volume}</h2>
+                        <div class="border-l-4 border-secondary pl-4">
+                `;
+                
+                // Sort issues within each volume
+                const sortedIssues = Object.keys(groupedData[volume]).sort((a, b) => {
+                    const dateA = new Date(groupedData[volume][a][0].publication_date);
+                    const dateB = new Date(groupedData[volume][b][0].publication_date);
+                    return dateB - dateA;
+                });
+                
+                sortedIssues.forEach(issue => {
+                    html += `
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-secondary mb-3">${issue}</h3>
+                            <div class="grid gap-4">
+                    `;
+                    
+                    groupedData[volume][issue].forEach(article => {
+                        const authorNames = article.authors.map(author => author.name).join(', ');
+                        
+                        html += `
+                            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow">
+                                <h4 class="text-lg font-semibold text-charcoal mb-2">${article.title}</h4>
+                                <p class="text-sm text-mediumGray mb-2">
+                                    <i class="fas fa-users mr-2"></i>${authorNames}
+                                </p>
+                                <p class="text-sm text-charcoal mb-3">${article.abstract}</p>
+                                <div class="flex flex-wrap items-center justify-between text-xs text-mediumGray">
+                                    <div class="flex items-center space-x-4">
+                                        <span><i class="fas fa-download mr-1"></i>${article.downloads} downloads</span>
+                                        <span><i class="fas fa-eye mr-1"></i>${article.views} views</span>
+                                        <span><i class="fas fa-quote-right mr-1"></i>${article.citations} citations</span>
+                                    </div>
+                                    <div>
+                                        <a href="${article.pdf_url}" class="bg-primary text-white px-3 py-1 rounded hover:bg-blue-800 transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i>PDF
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-xs text-mediumGray mt-1">
+                                        <i class="fas fa-bookmark mr-1"></i>Pages: ${article.pages} | DOI: ${article.doi}
+                                    </p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('archive-content').innerHTML = html;
+        }
+
+        // Load archive data when the page loads
+        document.addEventListener('DOMContentLoaded', loadArchiveData);
+    </script>
+</body>
+</html>

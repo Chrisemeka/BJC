@@ -1,0 +1,142 @@
+{
+  "articles": [
+    {
+      "id": "bjcet-2025-12-3-45",
+      "title": "Quantum-Classical Hybrid Computing for Cryptographic Security Optimization",
+      "volume": 13,
+      "issue": 1,
+      "publication_date": "2025-05-01",
+      "authors": [
+        {
+          "name": "Sarah Johnson",
+          "affiliation": "MIT, USA"
+        },
+        {
+          "name": "Michael Chen",
+          "affiliation": "Stanford University, USA"
+        },
+        {
+          "name": "Emma Rodriguez",
+          "affiliation": "Imperial College London, UK"
+        }
+      ],
+      "abstract": "This study investigates the integration of quantum computing principles with classical cryptographic systems to enhance security protocols in distributed networks. We demonstrate novel algorithms that leverage quantum entanglement for secure key distribution while maintaining compatibility with existing infrastructure.",
+      "keywords": ["quantum computing", "cryptography", "information security", "hybrid systems", "key distribution"],
+      "doi": "10.1234/bjcet.2025.12.3.45",
+      "pages": "45-62",
+      "downloads": 1245,
+      "views": 2873,
+      "citations": 12,
+      "pdf_url": "/assets/downloads/sinniati.pdf",
+      "journal": "bjcet"
+    },
+    {
+      "id": "jcse-2025-12-3-63",
+      "title": "Microservices Architecture Patterns for Real-Time IoT Applications",
+      "volume": 12,
+      "issue": 3,
+      "publication_date": "2025-05-01",
+      "authors": [
+        {
+          "name": "Li Wei",
+          "affiliation": "Tsinghua University, China"
+        },
+        {
+          "name": "James Wilson",
+          "affiliation": "Carnegie Mellon University, USA"
+        }
+      ],
+      "abstract": "This paper presents innovative microservices architecture patterns specifically designed for real-time IoT applications. We explore containerization strategies, load balancing algorithms, and fault tolerance mechanisms that ensure high availability and scalability in distributed IoT ecosystems.",
+      "keywords": ["microservices", "IoT", "software architecture", "containerization", "real-time systems"],
+      "doi": "10.1234/jcse.2025.12.3.63",
+      "pages": "63-82",
+      "downloads": 892,
+      "views": 1542,
+      "citations": 8,
+      "pdf_url": "/assets/downloads/sinniati.pdf",
+      "journal": "jcse"
+    },
+    {
+      "id": "bjits-2025-12-3-83",
+      "title": "Advanced Threat Detection Using Machine Learning in Zero-Trust Networks",
+      "volume": 11,
+      "issue": 1,
+      "publication_date": "2025-05-01",
+      "authors": [
+        {
+          "name": "Maria Garcia",
+          "affiliation": "University of São Paulo, Brazil"
+        },
+        {
+          "name": "Ahmed Hassan",
+          "affiliation": "Cairo University, Egypt"
+        },
+        {
+          "name": "Yuki Tanaka",
+          "affiliation": "University of Tokyo, Japan"
+        }
+      ],
+      "abstract": "We propose a novel approach to threat detection in zero-trust network architectures using ensemble machine learning techniques. Our method combines neural networks with behavioral analytics to identify sophisticated cyber threats with minimal false positives, achieving 98.5% accuracy in real-world deployments.",
+      "keywords": ["cybersecurity", "machine learning", "zero-trust", "threat detection", "network security"],
+      "doi": "10.1234/bjits.2025.12.3.83",
+      "pages": "83-97",
+      "downloads": 756,
+      "views": 1321,
+      "citations": 5,
+      "pdf_url": "/assets/downloads/sinniati.pdf",
+      "journal": "bjits"
+    },
+    {
+      "id": "bjcet-2025-12-2-25",
+      "title": "Federated Learning for Edge Computing: Privacy-Preserving AI at Scale",
+      "volume": 12,
+      "issue": 2,
+      "publication_date": "2025-03-01",
+      "authors": [
+        {
+          "name": "Robert Smith",
+          "affiliation": "Georgia Tech, USA"
+        },
+        {
+          "name": "Anna Kowalski",
+          "affiliation": "Technical University of Munich, Germany"
+        }
+      ],
+      "abstract": "This research explores federated learning algorithms optimized for edge computing environments. We address challenges related to data heterogeneity, communication efficiency, and privacy preservation while maintaining model accuracy across distributed edge nodes.",
+      "keywords": ["federated learning", "edge computing", "artificial intelligence", "privacy preservation", "distributed systems"],
+      "doi": "10.1234/bjcet.2025.12.2.25",
+      "pages": "25-43",
+      "downloads": 967,
+      "views": 1876,
+      "citations": 15,
+      "pdf_url": "/assets/downloads/sinniati.pdf",
+      "journal": "bjcet"
+    },
+    {
+      "id": "jcse-2025-12-1-12",
+      "title": "Agile DevOps Pipeline Optimization for Cloud-Native Applications",
+      "volume": 12,
+      "issue": 1,
+      "publication_date": "2025-01-01",
+      "authors": [
+        {
+          "name": "David Wilson",
+          "affiliation": "University of Cambridge, UK"
+        },
+        {
+          "name": "Fatima Al-Mansoori",
+          "affiliation": "Khalifa University, UAE"
+        }
+      ],
+      "abstract": "We present a comprehensive framework for optimizing DevOps pipelines in cloud-native environments using agile methodologies. Our approach integrates continuous integration/continuous deployment (CI/CD) with automated testing, monitoring, and rollback mechanisms to ensure rapid and reliable software delivery.",
+      "keywords": ["DevOps", "agile development", "cloud-native", "CI/CD", "software delivery"],
+      "doi": "10.1234/jcse.2025.12.1.12",
+      "pages": "12-28",
+      "downloads": 1456,
+      "views": 2245,
+      "citations": 9,
+      "pdf_url": "/assets/downloads/sinniati.pdf",
+      "journal": "jcse"
+    }
+  ]
+}

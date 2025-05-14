@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Submission - Catalyst Journals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="/index.html" class="inline-flex items-center text-sm font-medium text-charcoal hover:text-secondary" style="color: #1f2937;">
+                        <i class="fas fa-home mr-2"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <a href="../../journals/bjcet/bjcet.html" class="ml-1 text-sm font-medium text-charcoal hover:text-secondary md:ml-2" style="color: #1f2937;">Journal of Computing and Software Engineering</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <span class="ml-1 text-sm font-medium text-primary md:ml-2" style="color: #1e3a8a;">Article Submission</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar Navigation -->
+            <div id="about-sidebar" class="lg:col-span-1"></div>
+            
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h1 class="text-3xl font-bold text-primary mb-2">Journal of Computing and Software Engineering (JCSE)</h1>
+                    <h2 class="text-xl text-secondary mb-6">Online Paper Submission</h2>
+                    
+                    <form id="submission-form" class="space-y-6">
+                        <!-- Article Title -->
+                        <div>
+                            <label for="article-title" class="block text-sm font-semibold text-charcoal mb-2">Article Title</label>
+                            <input type="text" id="article-title" name="article-title" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary"
+                                placeholder="Title">
+                        </div>
+
+                        <!-- Abstract -->
+                        <div>
+                            <label for="abstract" class="block text-sm font-semibold text-charcoal mb-2">Abstract</label>
+                            <textarea id="abstract" name="abstract" required rows="6"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary resize-none"
+                                placeholder="Abstract"></textarea>
+                        </div>
+
+                        <!-- Corresponding Author Details -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-charcoal mb-4">Corresponding Author Details</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <input type="text" id="corresponding-author" name="corresponding-author" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary"
+                                        placeholder="Department/Faculty/Institution">
+                                </div>
+                                <div>
+                                    <label for="corresponding-email" class="block text-sm font-semibold text-charcoal mb-2">Email Address</label>
+                                    <input type="email" id="corresponding-email" name="corresponding-email" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary"
+                                        placeholder="Email Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Co-Author Details -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-charcoal mb-2">Co-Author Details 
+                                <span class="text-sm font-normal text-mediumGray">(Optional)</span>
+                            </h3>
+                            <div id="co-authors" class="space-y-4">
+                                <!-- Co-Author 1 -->
+                                <div class="co-author-row space-y-2">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                        <input type="text" name="co-author-1-name" placeholder="Name" 
+                                            class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                        <input type="text" name="co-author-1-dept" placeholder="Department/Faculty/Institution" 
+                                            class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                        <input type="email" name="co-author-1-email" placeholder="Email Address" 
+                                            class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" id="add-co-author" class="mt-4 bg-secondary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                <i class="fas fa-plus mr-2"></i>Add Co-Author
+                            </button>
+                        </div>
+
+                        <!-- Personal Details -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-charcoal mb-4">Personal Details</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="contact-number" class="block text-sm font-semibold text-charcoal mb-2">Contact Number</label>
+                                    <input type="tel" id="contact-number" name="contact-number" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary"
+                                        placeholder="+1234567890">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Upload -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-charcoal mb-4">Article Upload</h3>
+                            <div>
+                                <label for="article-file" class="block text-sm font-semibold text-charcoal mb-2">Upload Article</label>
+                                <input type="file" id="article-file" name="article-file" required
+                                    accept=".doc,.docx,.pdf" 
+                                    class="w-full px-3 py-2 border-2 border-dashed border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                                <p class="text-xs text-mediumGray mt-2">(File Type: .doc, .docx & Max. File Size:5MB)</p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex justify-start">
+                            <button type="submit" class="bg-secondary text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-colors font-semibold">
+                                Submit
+                            </button>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="mt-6 p-4 bg-gray-50 rounded-md">
+                            <p class="text-sm text-charcoal">
+                                In case of any issue during submission you can mail us your paper at 
+                                <a href="mailto:editor@abjournals.org" class="text-secondary hover:underline">editor@abjournals.org</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script>
+        // Load header and footer components
+        fetch('../../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('../../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        
+        fetch('../../../components/jcse-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-sidebar').innerHTML = data;
+            });
+
+        // Add Co-Author functionality
+        let coAuthorCount = 1;
+        document.getElementById('add-co-author').addEventListener('click', function() {
+            coAuthorCount++;
+            const coAuthorContainer = document.getElementById('co-authors');
+            
+            const newCoAuthor = document.createElement('div');
+            newCoAuthor.className = 'co-author-row space-y-2';
+            newCoAuthor.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <input type="text" name="co-author-${coAuthorCount}-name" placeholder="Name" 
+                        class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                    <input type="text" name="co-author-${coAuthorCount}-dept" placeholder="Department/Faculty/Institution" 
+                        class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                    <input type="email" name="co-author-${coAuthorCount}-email" placeholder="Email Address" 
+                        class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary">
+                </div>
+            `;
+            
+            coAuthorContainer.appendChild(newCoAuthor);
+        });
+
+        // Form submission
+        document.getElementById('submission-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = document.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            
+            // Submit form data to server
+            const formData = new FormData(this);
+            const submitButton = document.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            
+            // Create status message container if it doesn't exist
+            let statusMessage = document.getElementById('status-message');
+            if (!statusMessage) {
+                statusMessage = document.createElement('div');
+                statusMessage.id = 'status-message';
+                statusMessage.className = 'mb-4 p-4 rounded-md hidden';
+                document.getElementById('submission-form').prepend(statusMessage);
+            }
+            
+            fetch('/submit-article', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Success handling
+                statusMessage.className = 'mb-4 p-4 rounded-md bg-green-50 border border-green-200 text-green-700';
+                statusMessage.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold">Article Submitted Successfully!</h3>
+                            <p class="mt-1 text-sm">You will receive a confirmation email shortly at ${document.getElementById('corresponding-email').value}</p>
+                            ${data.trackingId ? `<p class="mt-1 text-sm">Tracking ID: <strong>${data.trackingId}</strong></p>` : ''}
+                        </div>
+                    </div>
+                `;
+                statusMessage.classList.remove('hidden');
+                
+                // Optionally reset form after successful submission
+                // this.reset();
+                
+                // Scroll to top to show success message
+                statusMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            })
+            .catch(error => {
+                // Error handling
+                console.error('Submission error:', error);
+                
+                let errorMessage = 'An error occurred while submitting your article. Please try again.';
+                
+                // Customize error messages based on error type
+                if (error.name === 'NetworkError' || error.message.includes('NetworkError')) {
+                    errorMessage = 'Network error: Please check your internet connection and try again.';
+                } else if (error.message.includes('413')) {
+                    errorMessage = 'File too large: Please ensure your file is under 5MB.';
+                } else if (error.message.includes('415')) {
+                    errorMessage = 'Invalid file type: Please upload a .doc, .docx, or .pdf file.';
+                } else if (error.message.includes('500')) {
+                    errorMessage = 'Server error: Please try again later or contact support.';
+                } else if (error.message.includes('400')) {
+                    errorMessage = 'Invalid form data: Please check all fields and try again.';
+                }
+                
+                statusMessage.className = 'mb-4 p-4 rounded-md bg-red-50 border border-red-200 text-red-700';
+                statusMessage.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold">Submission Failed</h3>
+                            <p class="mt-1 text-sm">${errorMessage}</p>
+                            <p class="mt-2 text-sm">If the problem persists, please email your paper to 
+                            <a href="mailto:editor@abjournals.org" class="text-red-800 underline">editor@abjournals.org</a></p>
+                        </div>
+                    </div>
+                `;
+                statusMessage.classList.remove('hidden');
+                
+                // Scroll to error message
+                statusMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            })
+            .finally(() => {
+                // Re-enable submit button and restore original text
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    </script>
+</body>
+</html>

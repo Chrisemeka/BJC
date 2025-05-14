@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies - Catalyst Journals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="../../index.html" class="inline-flex items-center text-sm font-medium text-charcoal hover:text-secondary" style="color: #1f2937;">
+                        <i class="fas fa-home mr-2"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <a href="../about-journal.html" class="ml-1 text-sm font-medium text-charcoal hover:text-secondary md:ml-2" style="color: #1f2937;">About</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-mediumGray" style="color: #6b7280;"></i>
+                        <span class="ml-1 text-sm font-medium text-primary md:ml-2" style="color: #1e3a8a;">Policies</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar Navigation -->
+            <div id="about-sidebar" class="lg:col-span-1"></div>
+            
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-md p-8" style="background-color: #ffffff;">
+                    <h1 class="text-3xl font-bold text-primary mb-6" style="color: #1e3a8a;">Journal Policies</h1>
+                    
+                    <!-- Publication Ethics -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Publication Ethics</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Catalyst Journals is committed to maintaining the highest standards of publication ethics and takes all possible measures against publication malpractice. Our policies are based on COPE's (Committee on Publication Ethics) guidelines.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Authorship</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">All listed authors must have made significant contributions to the research and approved the final version of the manuscript. Any changes to authorship after submission must be approved by all authors.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Originality and Plagiarism</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Authors must ensure that their work is entirely original. Any text or ideas borrowed from other sources must be properly cited. Plagiarism in any form constitutes unethical behavior and is unacceptable.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Data Access and Retention</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Authors may be asked to provide raw data related to their manuscript for editorial review and should be prepared to make such data publicly available if practicable.</p>
+                    </section>
+                    
+                    <!-- Peer Review Policy -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Peer Review Policy</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">All submissions to Catalyst Journals undergo rigorous peer review based on initial editor screening and anonymous refereeing by at least two expert reviewers.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Review Process</h3>
+                        <ol class="list-decimal pl-5 mb-4 text-charcoal space-y-2" style="color: #1f2937;">
+                            <li>Initial submission check by editorial staff for completeness and journal scope</li>
+                            <li>Editor-in-Chief or Associate Editor assessment for scientific quality</li>
+                            <li>Double-blind peer review by at least two experts</li>
+                            <li>Editorial decision based on reviewer recommendations</li>
+                            <li>Author revision if required</li>
+                            <li>Final acceptance and production</li>
+                        </ol>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Reviewer Guidelines</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Reviewers are expected to provide constructive, objective evaluations of manuscripts within their area of expertise. Reviews should be thorough and timely, maintaining confidentiality throughout the process.</p>
+                    </section>
+                    
+                    <!-- Open Access Policy -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Open Access Policy</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Catalyst Journals is a fully open access journal. All articles are immediately available to read and download upon publication, without any subscription or paywall barriers.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">License</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">All published articles are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" class="text-secondary hover:underline" style="color: #3b82f6;">Creative Commons Attribution 4.0 International License</a>. This license allows others to share and adapt the work, provided proper attribution is given.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Author Rights</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Authors retain copyright of their work and are free to deposit all versions of their manuscript in institutional or other repositories.</p>
+                    </section>
+                    
+                    <!-- Copyright Policy -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Copyright Policy</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Authors grant Catalyst Journals a license to publish the article and identify itself as the original publisher. Authors retain copyright and full publishing rights without restrictions.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Permissions</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">No permission is required to reuse published content as long as the original work is properly cited. For commercial reuse, please contact the editorial office.</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Preprint Policy</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">Authors may submit manuscripts that have been posted on preprint servers. The preprint should be cited in the cover letter upon submission.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Load header and footer components
+        fetch('../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        
+        fetch('../../components/about-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-sidebar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Custom CSS for additional styling beyond Tailwind */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Article content styling */
+.article-content {
+    line-height: 1.8;
+}
+
+.article-content h2 {
+    @apply text-2xl font-bold text-primary mt-8 mb-4;
+}
+
+.article-content h3 {
+    @apply text-xl font-semibold text-primary mt-6 mb-3;
+}
+
+.article-content p {
+    @apply mb-4 text-gray-700;
+}
+
+.article-content ul, .article-content ol {
+    @apply mb-4 pl-5;
+}
+
+.article-content ul {
+    @apply list-disc;
+}
+
+.article-content ol {
+    @apply list-decimal;
+}
+
+.article-content a {
+    @apply text-secondary hover:underline;
+}
+
+.article-content blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4 text-gray-600;
+}
+
+/* Dashboard sidebar */
+.dashboard-sidebar {
+    @apply bg-gray-100 rounded-lg p-4;
+}
+
+.dashboard-sidebar ul {
+    @apply space-y-2;
+}
+
+.dashboard-sidebar a {
+    @apply block px-3 py-2 rounded hover:bg-gray-200;
+}
+
+.dashboard-sidebar a.active {
+    @apply bg-primary text-white hover:bg-primary;
+}
+
+/* Table styling */
+.table-responsive {
+    @apply overflow-x-auto;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    @apply bg-gray-50;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faq - Babcock Journal of Computing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        
+
+        <div>
+            <div class="flex items-center text-primary hover:text-secondary cursor-pointer mb-4" onclick="history.back()">
+                <i class="fas fa-arrow-left mr-2 fa-2xl"></i>
+                <span class="text-2xl">Back</span>
+            </div>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-md p-8" style="background-color: #ffffff;">
+                    <h1 class="text-3xl font-bold text-primary mb-6" style="color: #1e3a8a;">Frequently Asked Questions (FAQ)</h1>
+                    
+                    <!-- introduction -->
+                    <section class="mb-8">
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            Find answers to common questions about submission guidelines, publication procedures, and policies for Babcock Journal of Computing (BJC).
+                        </p>
+                    </section>
+
+                    <!-- submission guidelines -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Submission Guidelines</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-blue-50 rounded-lg p-6" style="background-color: #f0f9ff;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: Should I use the template for submission?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> While using our official template is <strong>highly recommended</strong>, it is not mandatory. The template ensures proper formatting and includes all required sections, which can speed up the review process. If you don't use the template, ensure your manuscript follows our formatting guidelines exactly:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li>Double-spaced, 12-point Times New Roman font</li>
+                                    <li>1-inch margins on all sides</li>
+                                    <li>Line numbers throughout the document</li>
+                                    <li>Proper heading structure and reference format</li>
+                                </ul>
+                                <p class="mt-2 text-charcoal" style="color: #1f2937;">
+                                    <strong>Download the template:</strong> <a href="#" class="text-primary hover:underline" style="color: #1e3a8a;">BJCET Manuscript Template</a>
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: Is there a word or page limit?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> Yes, we have the following limits:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li><strong>Research Articles:</strong> 8,000-12,000 words (excluding references)</li>
+                                    <li><strong>Review Articles:</strong> 10,000-15,000 words (excluding references)</li>
+                                    <li><strong>Short Communications:</strong> 3,000-5,000 words (excluding references)</li>
+                                    <li><strong>Technical Notes:</strong> 2,000-4,000 words (excluding references)</li>
+                                    <li><strong>Abstract:</strong> 250-300 words maximum</li>
+                                    <li><strong>Keywords:</strong> 5-8 keywords maximum</li>
+                                </ul>
+                                <p class="mt-2 text-charcoal" style="color: #1f2937;">
+                                    Note: Manuscripts significantly exceeding these limits may be subject to desk rejection or require substantial revision.
+                                </p>
+                            </div>
+
+                            <div class="bg-green-50 rounded-lg p-6" style="background-color: #f0fdf4;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: What file formats are accepted for submission?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> We accept manuscripts in the following formats:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li><strong>Main Document:</strong> Microsoft Word (.docx) or LaTeX (.tex with PDF)</li>
+                                    <li><strong>Figures:</strong> High-resolution TIFF, PNG, or EPS (minimum 300 DPI)</li>
+                                    <li><strong>Tables:</strong> Embedded in main document or separate .docx files</li>
+                                    <li><strong>Supplementary Materials:</strong> PDF, Word, Excel, or multimedia files</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- article processing charges -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Article Processing Charges (APC)</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-yellow-50 rounded-lg p-6" style="background-color: #fffbeb;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: How do I pay my article processing charges?</h3>
+                                <p class="text-charcoal mb-3" style="color: #1f2937;">
+                                    <strong>A:</strong> Payment can be made using the following methods:
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <h4 class="font-semibold text-charcoal mb-2" style="color: #1f2937;">Bank Transfer (Preferred)</h4>
+                                        <ul class="text-sm text-charcoal space-y-1" style="color: #1f2937;">
+                                            <li><strong>Bank:</strong> First Bank of Nigeria</li>
+                                            <li><strong>Account Name:</strong> Babcock University Press</li>
+                                            <li><strong>Account Number:</strong> 2037651234</li>
+                                            <li><strong>SWIFT Code:</strong> FBNKNGLA</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-charcoal mb-2" style="color: #1f2937;">Online Payment</h4>
+                                        <ul class="text-sm text-charcoal space-y-1" style="color: #1f2937;">
+                                            <li>Credit/Debit Cards (Visa, MasterCard)</li>
+                                            <li>PayPal: payment@babcock.edu.ng</li>
+                                            <li>Flutterwave payment gateway</li>
+                                            <li>Paystack payment gateway</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mt-4 bg-white rounded p-3 border-l-4 border-primary" style="border-color: #1e3a8a;">
+                                    <p class="text-sm text-charcoal" style="color: #1f2937;">
+                                        <strong>Important:</strong> Always include your manuscript ID in the payment reference/description.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-purple-50 rounded-lg p-6" style="background-color: #faf5ff;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: How do I find out that my article processing charges has been safely received?</h3>
+                                <p class="text-charcoal mb-3" style="color: #1f2937;">
+                                    <strong>A:</strong> You will receive confirmation through multiple channels:
+                                </p>
+                                <ol class="list-decimal pl-5 text-charcoal space-y-2" style="color: #1f2937;">
+                                    <li><strong>Automatic Email Receipt:</strong> Instant confirmation for online payments</li>
+                                    <li><strong>Editorial Office Confirmation:</strong> Within 24-48 hours for bank transfers</li>
+                                    <li><strong>Manuscript Status Update:</strong> Status changes to "Payment Received" in your submission portal</li>
+                                    <li><strong>SMS Notification:</strong> If mobile number is provided during submission</li>
+                                </ol>
+                                <div class="mt-4 bg-white rounded p-3 border border-gray-200">
+                                    <p class="text-sm text-charcoal" style="color: #1f2937;">
+                                        <strong>Need to verify payment status?</strong> Email us at <a href="mailto:bjcet.editorial@babcock.edu.ng" class="text-primary hover:underline" style="color: #1e3a8a;">bjcet.editorial@babcock.edu.ng</a> with your manuscript ID and payment reference.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-red-50 rounded-lg p-6" style="background-color: #fef2f2;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: When exactly do I need to pay the APC?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> APC payment is required <strong>only after your manuscript is accepted</strong> for publication. The sequence is:
+                                </p>
+                                <ol class="list-decimal pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li>You submit your manuscript (no payment required)</li>
+                                    <li>Manuscript undergoes peer review</li>
+                                    <li>If accepted, you receive an acceptance letter with invoice</li>
+                                    <li>You make the payment within 30 days</li>
+                                    <li>Article is published after payment confirmation</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- review process -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Review Process</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-indigo-50 rounded-lg p-6" style="background-color: #eef2ff;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: How long does the review process take?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> Our typical review timeline is:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li><strong>Initial Editorial Screening:</strong> 5-7 business days</li>
+                                    <li><strong>Peer Review:</strong> 6-8 weeks</li>
+                                    <li><strong>Author Revision:</strong> 4-6 weeks (if required)</li>
+                                    <li><strong>Final Decision:</strong> 2-4 weeks after revision</li>
+                                    <li><strong>Total Time:</strong> 10-15 weeks from submission to final decision</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-cyan-50 rounded-lg p-6" style="background-color: #ecfeff;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: Can I check the status of my manuscript?</h3>
+                                <p class="text-charcoal" style="color: #1f2937;">
+                                    <strong>A:</strong> Yes, you can track your manuscript status 24/7 through:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li>Your submission portal dashboard</li>
+                                    <li>Email notifications at key milestones</li>
+                                    <li>Direct email inquiry to the editorial office</li>
+                                </ul>
+                                <p class="mt-2 text-charcoal" style="color: #1f2937;">
+                                    Common status updates include: Submitted, Under Review, Revision Required, Accepted, Payment Pending, In Production, Published.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- technical support -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Technical Support</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-orange-50 rounded-lg p-6" style="background-color: #fff7ed;">
+                                <h3 class="text-lg font-semibold text-primary mb-3" style="color: #1e3a8a;">Q: I'm having trouble uploading my manuscript. What should I do?</h3>
+                                <p class="text-charcoal mb-3" style="color: #1f2937;">
+                                    <strong>A:</strong> Try these troubleshooting steps:
+                                </p>
+                                <ol class="list-decimal pl-5 text-charcoal space-y-1" style="color: #1f2937;">
+                                    <li>Check file size (maximum 50MB total)</li>
+                                    <li>Ensure files are in accepted formats (.docx, .pdf, .tiff, .png)</li>
+                                    <li>Clear your browser cache and cookies</li>
+                                    <li>Try a different browser (Chrome, Firefox, Safari)</li>
+                                    <li>Disable browser extensions/plugins temporarily</li>
+                                </ol>
+                                <p class="mt-3 text-charcoal" style="color: #1f2937;">
+                                    If problems persist, contact our technical support at <a href="mailto:tech.support@babcock.edu.ng" class="text-primary hover:underline" style="color: #1e3a8a;">tech.support@babcock.edu.ng</a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- contact information -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Still Have Questions?</h2>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                                If you can't find the answer to your question here, please don't hesitate to contact us:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-semibold text-charcoal mb-2" style="color: #1f2937;">Editorial Office</h4>
+                                    <p class="text-sm text-charcoal" style="color: #1f2937;">
+                                        <strong>Email:</strong> bjcet.editorial@babcock.edu.ng<br>
+                                        <strong>Phone:</strong> +234 (0) 812 345 6789<br>
+                                        <strong>Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM (WAT)
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-charcoal mb-2" style="color: #1f2937;">Technical Support</h4>
+                                    <p class="text-sm text-charcoal" style="color: #1f2937;">
+                                        <strong>Email:</strong> tech.support@babcock.edu.ng<br>
+                                        <strong>Response Time:</strong> Within 24 hours<br>
+                                        <strong>Available:</strong> 24/7 for urgent issues
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- <script src="../../assets/js/main.js"></script> -->
+    <script>
+        // Load header and footer components
+        fetch('../../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('../../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        
+        fetch('../../../components/bjcet-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-sidebar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

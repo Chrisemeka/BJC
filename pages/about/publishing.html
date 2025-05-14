@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Journal - Catalyst Journals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',      // Deep Navy Blue
+                        secondary: '#3b82f6',    // Medium Blue
+                        accent: '#dbeafe',       // Light Blue (backgrounds/highlights)
+                        success: '#059669',      // Success Green
+                        warning: '#ea580c',      // Warning Orange
+                        error: '#dc2626',        // Error Red
+                        charcoal: '#1f2937',     // Body Text (Dark Gray)
+                        mediumGray: '#6b7280'    // Secondary Text
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray" style="background-color: #f9fafb;">
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <div>
+            <div class="flex items-center text-primary hover:text-secondary cursor-pointer mb-4" onclick="history.back()">
+                <i class="fas fa-arrow-left mr-2 fa-2xl"></i>
+                <span class="text-2xl">Back</span>
+            </div>
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-lg shadow-md p-8" style="background-color: #ffffff;">
+                    <h1 class="text-3xl font-bold text-primary mb-6" style="color: #1e3a8a;">Publishing Procedures</h1>
+                    
+                    <!-- introduction -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">About Our Publishing Process</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            The Babcock Journal of Computing (BJC) operates under a transparent and efficient publishing process designed to ensure the highest quality of published research. As an open-access journal, we are committed to making cutting-edge research freely available to the global scientific community.
+                        </p>
+                    </section>
+
+                    <!-- submission process -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Submission Process</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            Authors can submit their manuscripts through our online submission portal. The following steps outline our submission process:
+                        </p>
+                        <ol class="list-decimal pl-5 mb-4 text-charcoal space-y-2" style="color: #1f2937;">
+                            <li><strong>Manuscript Preparation:</strong> Authors must ensure their manuscripts adhere to BJCET formatting guidelines and include all required sections (abstract, keywords, references, etc.)</li>
+                            <li><strong>Online Submission:</strong> Submit through our manuscript management system with all required files (main document, figures, tables, supplementary materials)</li>
+                            <li><strong>Initial Screening:</strong> Editorial team conducts initial assessment within 5-7 business days</li>
+                            <li><strong>Plagiarism Check:</strong> Automated plagiarism detection using iThenticate software</li>
+                            <li><strong>Editorial Decision:</strong> Manuscripts proceed to peer review or receive desk rejection with feedback</li>
+                        </ol>
+                    </section>
+
+                    <!-- peer review process -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Peer Review Process</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            BJCET employs a rigorous double-blind peer review process to maintain scientific excellence:
+                        </p>
+                        <ul class="list-disc pl-5 mb-4 text-charcoal space-y-2" style="color: #1f2937;">
+                            <li><strong>Reviewer Selection:</strong> At least two independent experts are selected based on their expertise in the manuscript's subject area</li>
+                            <li><strong>Review Timeline:</strong> Standard review period of 6-8 weeks, with regular follow-ups to ensure timely completion</li>
+                            <li><strong>Double-Blind Process:</strong> Both author and reviewer identities remain anonymous throughout the review process</li>
+                            <li><strong>Review Criteria:</strong> Reviewers assess originality, technical quality, clarity, significance, and relevance to the journal's scope</li>
+                            <li><strong>Decision Categories:</strong> Accept, Minor Revisions, Major Revisions, or Reject</li>
+                        </ul>
+                    </section>
+
+                    <!-- revision and decision -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Revision and Final Decision</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            Following peer review, authors receive detailed feedback and recommendations:
+                        </p>
+                        <ul class="list-disc pl-5 mb-4 text-charcoal space-y-2" style="color: #1f2937;">
+                            <li><strong>Reviewer Comments:</strong> Comprehensive feedback provided for all revision requests</li>
+                            <li><strong>Response Letter:</strong> Authors must submit a detailed response letter addressing each reviewer comment</li>
+                            <li><strong>Re-review Process:</strong> Major revisions undergo re-review by original or new reviewers</li>
+                            <li><strong>Final Decision:</strong> Editor makes final decision based on revised manuscript and author responses</li>
+                            <li><strong>Appeals Process:</strong> Authors may appeal negative decisions with additional evidence or clarifications</li>
+                        </ul>
+                    </section>
+
+                    <!-- publication timeline -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Publication Timeline</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            Our typical publication timeline includes the following milestones:
+                        </p>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <ul class="space-y-2 text-charcoal" style="color: #1f2937;">
+                                <li><strong>Submission to First Decision:</strong> 8-12 weeks</li>
+                                <li><strong>Revision Period:</strong> 4-6 weeks (author-dependent)</li>
+                                <li><strong>Final Decision:</strong> 2-4 weeks after revision submission</li>
+                                <li><strong>Copy Editing:</strong> 2-3 weeks</li>
+                                <li><strong>Online Publication:</strong> Immediate upon final acceptance</li>
+                                <li><strong>DOI Assignment:</strong> Within 24 hours of publication</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- article processing charges -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Article Processing Charges (APC)</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            As an open-access journal, BJCET operates on an Article Processing Charge (APC) model to support our publishing operations and ensure global free access to all published content.
+                        </p>
+                        
+                        <h3 class="text-lg font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Current APC Structure</h3>
+                        <div class="bg-blue-50 rounded-lg p-6 mb-4" style="background-color: #f0f9ff;">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-primary mb-2" style="color: #1e3a8a;">₦30,000</p>
+                                <p class="text-charcoal" style="color: #1f2937;">Standard Article Processing Charge. Inclusive of Submission Fee and Acceptance Fee</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">What the APC Covers</h3>
+                        <ul class="list-disc pl-5 mb-4 text-charcoal space-y-1" style="color: #1f2937;">
+                            <li>Rigorous peer review process management</li>
+                            <li>Professional copy editing and proofreading</li>
+                            <li>XML and PDF production services</li>
+                            <li>DOI registration and metadata submission</li>
+                            <li>Indexing in major databases</li>
+                            <li>Hosting and preservation of published content</li>
+                            <li>24/7 online access to readers worldwide</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Payment Information</h3>
+                        <ul class="list-disc pl-5 mb-4 text-charcoal space-y-1" style="color: #1f2937;">
+                            <li><strong>When to Pay:</strong> APC is due upon acceptance of the manuscript for publication</li>
+                            <li><strong>Payment Methods:</strong> Bank transfer, credit card (Visa/MasterCard), PayPal</li>
+                            <li><strong>Invoice Processing:</strong> Invoices are generated within 48 hours of acceptance</li>
+                            <li><strong>Publication Hold:</strong> Articles will not be published until APC payment is received</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-primary mt-6 mb-3" style="color: #1e3a8a;">Waivers and Discounts</h3>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            BJCET recognizes the financial constraints faced by researchers from developing countries and institutions with limited resources. We offer:
+                        </p>
+                        <ul class="list-disc pl-5 mb-4 text-charcoal space-y-1" style="color: #1f2937;">
+                            <li><strong>Full Waivers:</strong> Available for authors from low-income countries (as defined by World Bank criteria)</li>
+                            <li><strong>50% Discount:</strong> Available for authors from lower-middle-income countries</li>
+                            <li><strong>Student Discount:</strong> 25% discount for first-author students with verification</li>
+                            <li><strong>Institutional Agreements:</strong> Special rates for subscribing institutions</li>
+                        </ul>
+                    </section>
+
+                    <!-- contact information -->
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold text-primary mb-4 border-b pb-2" style="color: #1e3a8a;">Editorial Office Contact</h2>
+                        <p class="mb-4 text-charcoal" style="color: #1f2937;">
+                            For questions about the publishing process or APC policies, please contact:
+                        </p>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-charcoal mb-2" style="color: #1f2937;"><strong>Email:</strong> bjcet.editorial@babcock.edu.ng</p>
+                            <p class="text-charcoal mb-2" style="color: #1f2937;"><strong>Phone:</strong> +234 (0) 812 345 6789</p>
+                            <p class="text-charcoal" style="color: #1f2937;"><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (WAT)</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- <script src="../../assets/js/main.js"></script> -->
+    <script>
+        // Load header and footer components
+        fetch('../../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        
+        fetch('../../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        
+        fetch('../../../components/bjcet-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-sidebar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
